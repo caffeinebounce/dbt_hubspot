@@ -1,4 +1,4 @@
-{% docs _fivetran_synced %}
+{% docs _synced_at %}
 Timestamp of when Fivetran synced a record.
 {% enddocs %}
 
