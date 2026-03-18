@@ -7,8 +7,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_contact_deleted
         description: '{{ doc("is_deleted") }}'
       - name: bcc_emails
@@ -81,8 +81,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: app_id
         description: The app ID.
       - name: app_name
@@ -153,8 +153,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_contact_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: contact_id
         description: The ID of the contact.
         tests:
@@ -259,8 +259,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: contact_list_id
         description: The ID of the contact list.
         tests:

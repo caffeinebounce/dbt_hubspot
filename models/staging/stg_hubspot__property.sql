@@ -22,7 +22,7 @@ with base as (
     select
         source_relation,
         _fivetran_id,
-        _fivetran_synced,
+        _synced_at,
         calculated,
         created_at,
         description,

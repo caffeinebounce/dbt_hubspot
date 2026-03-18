@@ -21,7 +21,7 @@ with base as (
 
     select
         source_relation,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         bcc as bcc_emails,
         cc as cc_emails,
         drop_message,

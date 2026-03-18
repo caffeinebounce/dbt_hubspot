@@ -1,7 +1,7 @@
 {% macro get_deal_property_history_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "deal_id", "datatype": dbt.type_int()},
     {"name": "name", "datatype": dbt.type_string()},
     {"name": "source", "datatype": dbt.type_string()},

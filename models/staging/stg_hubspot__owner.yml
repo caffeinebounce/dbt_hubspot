@@ -11,8 +11,8 @@ models:
         description: The ID of the owner.
         tests:
           - not_null
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: active_user_id
         description: ID of the active user account associated with the owner. Null if owner is not an active user.
       - name: created_timestamp

@@ -1,7 +1,7 @@
 {% macro get_email_event_open_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "browser", "datatype": dbt.type_string()},
     {"name": "duration", "datatype": dbt.type_string()},
     {"name": "id", "datatype": dbt.type_string()},

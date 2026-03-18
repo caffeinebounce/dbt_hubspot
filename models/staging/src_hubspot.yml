@@ -6,15 +6,15 @@ sources:
     database: "{% if target.type != 'spark'%}{{ var('hubspot_database', target.database) }}{% endif %}"
     loader: Fivetran
     config:
-      loaded_at_field: _fivetran_synced
+      loaded_at_field: _synced_at
       enabled: "{{ var('hubspot_sources', []) == [] }}"
     tables:
       - name: calendar_event
         identifier: "{{ var('hubspot_calendar_event_identifier', 'calendar_event')}}"
         description: Each record represents a calendar event.
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: avatar_url
             description: URL of image associated with social media event.
           - name: campaign_guid
@@ -72,8 +72,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_company_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
           - name: id
@@ -109,8 +109,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_company_enabled', true) and var('hubspot_company_property_history_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: company_id
             description: The ID of the related company record.
           - name: name
@@ -131,8 +131,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_contact_merge_audit_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: canonical_vid
             description: The contact ID of the contact which the vid_to_merge contact was merged into.
           - name: contact_id
@@ -163,8 +163,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: id
             description: The ID of the contact.
           - name: property_email_1
@@ -195,8 +195,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_contact_form_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: contact_id
             description: The ID of the related contact.
           - name: conversion_id
@@ -222,8 +222,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: created_at
             description: A timestamp of the time the list was created.
           - name: id
@@ -294,8 +294,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: added_at
             description: The timestamp a contact was added to a list.
           - name: contact_id
@@ -312,8 +312,8 @@ sources:
             warn_after: {count: 84, period: hour}
             error_after: {count: 168, period: hour}
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: contact_id
             description: The ID of the related contact record.
           - name: name
@@ -370,8 +370,8 @@ sources:
             description: The Fivetran calculated exist time of the deal stage. 
           - name: _fivetran_start
             description: The date the deal stage was entered.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: date_entered
             description: The timestamp the deal stage was entered.
           - name: deal_id
@@ -389,8 +389,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_deal_enabled', true) and var('hubspot_deal_company_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: company_id
             description: The ID of the company.
           - name: deal_id
@@ -406,8 +406,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_deal_enabled', true) and var('hubspot_deal_contact_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: contact_id
             description: The ID of the contact.
           - name: deal_id
@@ -425,8 +425,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: Whether the stage is currently in use.
           - name: display_order
@@ -448,8 +448,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: Whether the pipeline stage is currently in use.
           - name: closed_won
@@ -479,8 +479,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_deal_enabled', true) and var('hubspot_deal_property_history_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: deal_id
             description: The ID of the related deal record.
           - name: name
@@ -500,8 +500,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: app_id
             description: The app ID.
           - name: app_name
@@ -532,8 +532,8 @@ sources:
             warn_after: {count: 84, period: hour}
             error_after: {count: 168, period: hour}
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: app_id
             description: The ID of the app that sent the email.
           - name: caused_by_created
@@ -569,8 +569,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_bounce_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: category
             description: |
               The best-guess of the type of bounce encountered.
@@ -589,8 +589,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_click_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: browser
             description: '{{ doc("email_event_browser") }}'
           - name: id
@@ -612,8 +612,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_deferred_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: attempt
             description: The delivery attempt number.
           - name: id
@@ -627,8 +627,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_delivered_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: id
             description: The ID of the event.
           - name: response
@@ -642,8 +642,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_dropped_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: bcc
             description: The 'bcc' field of the email message.
           - name: cc
@@ -667,8 +667,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_forward_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: browser
             description: '{{ doc("email_event_browser") }}'
           - name: id
@@ -686,8 +686,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_open_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: browser
             description: '{{ doc("email_event_browser") }}'
           - name: duration
@@ -707,8 +707,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_print_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: browser
             description: '{{ doc("email_event_browser") }}'
           - name: id
@@ -726,8 +726,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_sent_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: bcc
             description: The 'cc' field of the email message.
           - name: cc
@@ -747,8 +747,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_spam_report_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: id
             description: The ID of the event.
           - name: ip_address
@@ -762,8 +762,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_marketing_enabled', true) and var('hubspot_email_event_enabled', true) and var('hubspot_email_event_status_change_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: bounced
             description: |
               A HubSpot employee explicitly initiated the status change to block messages to the recipient.
@@ -788,8 +788,8 @@ sources:
         identifier: "{{ var('hubspot_email_subscription_identifier', 'email_subscription')}}"
         description: Each record represents an email subscription in Hubspot.
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: Whether the subscription is active.
           - name: description
@@ -805,8 +805,8 @@ sources:
         identifier: "{{ var('hubspot_email_subscription_change_identifier', 'email_subscription_change')}}"
         description: Each record represents a change to an email subscription in Hubspot.
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: caused_by_event_id
             description: The ID of the event that caused the subscription change.
           - name: change
@@ -830,8 +830,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: >
               Whether the engagement is currently being shown in the UI.
@@ -865,8 +865,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_call_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: engagement_id
             description: The ID of the engagement.
           - name: _fivetran_deleted
@@ -898,8 +898,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_communication_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
           - name: engagement_id
@@ -917,8 +917,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_company_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: company_id
             description: The ID of the related company.
           - name: engagement_id
@@ -932,8 +932,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_contact_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: contact_id
             description: The ID of the related contact.
           - name: engagement_id
@@ -947,8 +947,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_deal_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: deal_id
             description: The ID of the related contact.
           - name: engagement_id
@@ -962,8 +962,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_email_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: engagement_id
             description: The ID of the engagement.
           - name: property_hs_createdate
@@ -991,8 +991,8 @@ sources:
         identifier: "{{ var('hubspot_engagement_email_cc_identifier', 'engagement_email_cc')}}"
         description: Each record represents a CC'd email address as part of an EMAIL engagement.
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: email
             description: The email address of the recipient.
           - name: engagement_id
@@ -1006,8 +1006,8 @@ sources:
         identifier: "{{ var('hubspot_engagement_email_to_identifier', 'engagement_email_to')}}"
         description: Each record represents a TO email address as part of an EMAIL engagement.
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: email
             description: The email address of the recipient.
           - name: engagement_id
@@ -1023,8 +1023,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_meeting_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: engagement_id
             description: The ID of the engagement.
           - name: property_hs_createdate
@@ -1054,8 +1054,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_note_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: body
             description: The body of the note. The body has a limit of 65536 characters.
           - name: engagement_id
@@ -1087,8 +1087,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_sales_enabled', true) and var('hubspot_engagement_enabled', true) and var('hubspot_engagement_task_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: engagement_id
             description: The ID of the engagement.
           - name: property_hs_createdate
@@ -1155,8 +1155,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_owner_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active_user_id
             description: ID of the active user account associated with the owner. Null if owner is not an active user.
           - name: created_at
@@ -1186,8 +1186,8 @@ sources:
             description: >
               (DEPRECATED IN OCTOBER 2025) Fivetran generated id. Joins to `property_id` (ALSO DEPRECATED) in the `PROPERTY_OPTION` table.
               Use `hubspot_object` to join to `property_option` instead.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: calculated
             description: Indicates if the property is calculated by a HubSpot process
           - name: created_at
@@ -1221,8 +1221,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_property_enabled', true) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: label
             description: The label of the option displayed inside the HubSpot app. Part of the composite primary key with `name` and `hubspot_object`. 
           - name: property_id
@@ -1247,8 +1247,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: ticket_id
             description: The ID of the related ticket.
           - name: company_id
@@ -1262,8 +1262,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: ticket_id
             description: The ID of the related ticket.
           - name: contact_id
@@ -1277,8 +1277,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_ticket_deal_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: ticket_id
             description: The ID of the related ticket.
           - name: deal_id
@@ -1292,8 +1292,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: ticket_id
             description: The ID of the related ticket.
           - name: engagement_id
@@ -1309,8 +1309,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: Boolean indicating whether the pipeline stage is active.
           - name: display_order
@@ -1338,8 +1338,8 @@ sources:
         columns:
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: active
             description: Boolean indicating whether the pipeline is active.
           - name: display_order
@@ -1361,8 +1361,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: source
             description: '{{ doc("history_source") }}'
           - name: source_id
@@ -1386,8 +1386,8 @@ sources:
         config:
           enabled: "{{ var('hubspot_service_enabled', false) and var('hubspot_sources', []) == [] }}"
         columns:
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: id
             description: ID of the ticket.
           - name: is_deleted
@@ -1427,8 +1427,8 @@ sources:
             description: The ID of the deal the record has been merged INTO.
           - name: merged_deal_id
             description: ID of deal that has been merged.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
 
       - name: owner_team
         identifier: '{{ var("hubspot_owner_team_identifier", "owner_team") }}'
@@ -1442,8 +1442,8 @@ sources:
             description: Unique ID of the team to which the owner belongs.
           - name: is_team_primary
             description: Indicates whether the team is the owner's primary team.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
 
@@ -1459,8 +1459,8 @@ sources:
             description: Name of the role.
           - name: requires_billing_write
             description: Indicates whether the role requires billing write access.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
 
@@ -1474,8 +1474,8 @@ sources:
             description: Unique ID of the team.
           - name: name
             description: Name of the team.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
 
@@ -1491,8 +1491,8 @@ sources:
             description: Unique ID of the associated team.
           - name: is_secondary_user
             description: Indicates whether the team is a secondary team for the user.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'
 
@@ -1514,7 +1514,7 @@ sources:
             description: First name of the user.
           - name: last_name
             description: Last name of the user.
-          - name: _fivetran_synced
-            description: '{{ doc("_fivetran_synced") }}'
+          - name: _synced_at
+            description: '{{ doc("_synced_at") }}'
           - name: _fivetran_deleted
             description: '{{ doc("_fivetran_deleted") }}'

@@ -13,8 +13,8 @@ models:
         description: Unique ID of the team to which the owner belongs.
       - name: is_team_primary
         description: Indicates whether the team is the owner's primary team.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_deleted
         description: '{{ doc("_fivetran_deleted") }}'
 
@@ -31,8 +31,8 @@ models:
         description: Name of the role.
       - name: requires_billing_write
         description: Indicates whether the role requires billing write access.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_deleted
         description: '{{ doc("_fivetran_deleted") }}'
 
@@ -47,8 +47,8 @@ models:
           - not_null
       - name: team_name
         description: Name of the team.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_deleted
         description: '{{ doc("_fivetran_deleted") }}'
 
@@ -63,8 +63,8 @@ models:
         description: Unique ID of the associated team.
       - name: is_secondary_user
         description: Indicates whether the team is a secondary team for the user.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_deleted
         description: '{{ doc("_fivetran_deleted") }}'
 
@@ -87,7 +87,7 @@ models:
         description: First name of the user.
       - name: last_name
         description: Last name of the user.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_deleted
         description: '{{ doc("_fivetran_deleted") }}'

@@ -35,7 +35,7 @@ with base as (
         as {{ dbt.type_timestamp() }}) as timestamp_at,
         user_id,
         vid_to_merge,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at
     from macro
     
 )

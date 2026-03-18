@@ -7,8 +7,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: engagement_id
         description: The ID of the engagement.
         tests:
@@ -43,8 +43,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_deleted
         description: '{{ doc("_fivetran_deleted") }}'
       - name: engagement_id
@@ -79,8 +79,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: company_id
         description: The ID of the related company.
       - name: engagement_id
@@ -93,8 +93,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: contact_id
         description: The ID of the related contact.
       - name: engagement_id
@@ -107,8 +107,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: deal_id
         description: The ID of the related contact.
       - name: engagement_id
@@ -121,8 +121,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
@@ -157,8 +157,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
@@ -193,8 +193,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
@@ -231,8 +231,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
@@ -267,8 +267,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: engagement_id
         description: The ID of the engagement.
         tests:

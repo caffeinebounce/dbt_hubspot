@@ -46,7 +46,7 @@ with base as (
         source_relation,
         company_id,
         coalesce(is_company_deleted, _fivetran_deleted) as is_company_deleted,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         company_name,
         description,
         created_date,

@@ -9,8 +9,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_deal_pipeline_stage_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: deal_pipeline_id
         description: The ID of the related pipeline.
       - name: deal_pipeline_stage_id
@@ -39,8 +39,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_deal_pipeline_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: deal_pipeline_id
         description: The ID of the pipeline.
         tests:
@@ -64,8 +64,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_deal_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: deal_id
         description: The ID of the deal
         tests:
@@ -100,8 +100,8 @@ models:
         description: The Fivetran calculated exist time of the deal stage. 
       - name: _fivetran_start
         description: The date the deal stage was entered.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: date_entered
         description: The timestamp the deal stage was entered.
       - name: deal_id
@@ -124,8 +124,8 @@ models:
         description: The ID of the deal.
       - name: type_id
         description: The ID of the type.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: category
         description: The association category. Either HUBSPOT_DEFINED (default label) or USER_DEFINED (custom label).
 
@@ -140,8 +140,8 @@ models:
         description: The ID of the deal.
       - name: type_id
         description: The ID of the type.
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: category
         description: The association category. Either HUBSPOT_DEFINED (default label) or USER_DEFINED (custom label).
 
@@ -150,8 +150,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: change_source
         description: '{{ doc("history_source") }}'
       - name: change_source_id
@@ -178,7 +178,7 @@ models:
         description: The ID of the deal the record has been merged INTO.
         tests:
           - not_null
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
 
 

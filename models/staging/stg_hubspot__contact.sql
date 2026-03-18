@@ -54,7 +54,7 @@ with base as (
         cast(created_date as {{ dbt.type_timestamp() }}) as created_date,
         job_title,
         company_annual_revenue,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at
 
         --The below macro adds the fields defined within your hubspot__contact_pass_through_columns variable into the staging model
         {{ fivetran_utils.fill_pass_through_columns('hubspot__contact_pass_through_columns') }}

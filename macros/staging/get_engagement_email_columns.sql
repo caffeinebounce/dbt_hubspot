@@ -1,7 +1,7 @@
 {% macro get_engagement_email_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "_fivetran_deleted", "datatype": dbt.type_boolean()},
     {"name": "type", "datatype": dbt.type_string(), "alias": "engagement_type"},
     {"name": "engagement_id", "datatype": dbt.type_int()},

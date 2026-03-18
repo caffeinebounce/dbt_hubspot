@@ -7,8 +7,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: ticket_id
         description: The ID of the related ticket.
       - name: company_id
@@ -21,8 +21,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: ticket_id
         description: The ID of the related ticket.
       - name: contact_id
@@ -35,8 +35,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: ticket_id
         description: The ID of the related ticket.
       - name: deal_id
@@ -49,8 +49,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: ticket_id
         description: The ID of the related ticket.
       - name: engagement_id
@@ -63,8 +63,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: _fivetran_start
         description: '{{ doc("_fivetran_start") }}'
       - name: _fivetran_end
@@ -87,8 +87,8 @@ models:
     columns:
       - name: source_relation
         description: "{{ doc('source_relation') }}"
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: ticket_id
         description: ID of the ticket.
         tests:
@@ -123,8 +123,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_ticket_pipeline_stage_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_active
         description: Boolean indicating whether the pipeline stage is active.
       - name: display_order
@@ -151,8 +151,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: is_ticket_pipeline_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: is_active
         description: Boolean indicating whether the pipeline is active.
       - name: display_order

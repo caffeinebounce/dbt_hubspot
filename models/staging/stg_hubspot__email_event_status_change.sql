@@ -21,7 +21,7 @@ with base as (
 
     select
         source_relation,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         bounced as is_bounced,
         id as event_id,
         portal_subscription_status as subscription_status,

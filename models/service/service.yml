@@ -48,8 +48,8 @@ models:
           - not_null
       - name: is_ticket_deleted
         description: '{{ doc("is_deleted") }}'
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+      - name: _synced_at
+        description: '{{ doc("_synced_at") }}'
       - name: closed_date
         description: The date the ticket was closed.
       - name: created_date

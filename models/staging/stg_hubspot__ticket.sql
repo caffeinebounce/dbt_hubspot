@@ -46,7 +46,7 @@ with base as (
         source_relation,
         ticket_id,
         coalesce(_fivetran_ticket_deleted, is_ticket_deleted) as is_ticket_deleted,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         cast(closed_date as {{ dbt.type_timestamp() }}) as closed_date,
         cast(created_date as {{ dbt.type_timestamp() }}) as created_date,
         first_agent_reply_at,

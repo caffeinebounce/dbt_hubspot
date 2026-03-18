@@ -26,7 +26,7 @@ final as (
         source_relation,
         cast(pipeline_id as {{ dbt.type_string() }}) as ticket_pipeline_id,
         _fivetran_deleted as is_ticket_pipeline_deleted,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         active as is_active,
         display_order,
         label as pipeline_label,

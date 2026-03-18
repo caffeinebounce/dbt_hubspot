@@ -25,7 +25,7 @@ with base as (
         property_id,
         lower(hubspot_object) as hubspot_object, -- should already be lower but just in case
         name as property_option_name,
-        _fivetran_synced,
+        _synced_at,
         display_order,
         hidden,
         value as property_option_value

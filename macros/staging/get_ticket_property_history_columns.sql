@@ -1,7 +1,7 @@
 {% macro get_ticket_property_history_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "_fivetran_start", "datatype": dbt.type_timestamp()},
     {"name": "_fivetran_end", "datatype": dbt.type_timestamp()},
     {"name": "ticket_id", "datatype": dbt.type_int()},

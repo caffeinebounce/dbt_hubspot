@@ -4,7 +4,7 @@
     {"name": "_fivetran_active", "datatype": "boolean"},
     {"name": "_fivetran_end", "datatype": dbt.type_timestamp()},
     {"name": "_fivetran_start", "datatype": dbt.type_timestamp()},
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "date_entered", "datatype": dbt.type_timestamp()},
     {"name": "deal_id", "datatype": dbt.type_int()},
     {"name": "source", "datatype": dbt.type_string()},

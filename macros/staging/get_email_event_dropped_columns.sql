@@ -1,7 +1,7 @@
 {% macro get_email_event_dropped_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "bcc", "datatype": dbt.type_string()},
     {"name": "cc", "datatype": dbt.type_string()},
     {"name": "drop_message", "datatype": dbt.type_string()},

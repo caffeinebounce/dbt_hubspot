@@ -25,7 +25,7 @@ with base as (
         team_id,
         is_team_primary,
         _fivetran_deleted as is_deleted,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at
     from macro
 )
 

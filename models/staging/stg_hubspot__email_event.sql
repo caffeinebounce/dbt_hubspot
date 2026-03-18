@@ -21,7 +21,7 @@ with base as (
 
     select
         source_relation,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         app_id,
         cast(caused_by_created as {{ dbt.type_timestamp() }}) as caused_timestamp,
         caused_by_id as caused_by_event_id,

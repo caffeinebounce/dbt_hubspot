@@ -1,7 +1,7 @@
 {% macro get_ticket_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "id", "datatype": dbt.type_int(), "alias": "ticket_id"},
     {"name": "_fivetran_deleted", "datatype": dbt.type_boolean(), "alias": "_fivetran_ticket_deleted"},
     {"name": "is_deleted", "datatype": "boolean", "alias": "is_ticket_deleted"},

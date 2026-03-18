@@ -1,7 +1,7 @@
 {% macro get_contact_merge_audit_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "canonical_vid", "datatype": dbt.type_int()},
     {"name": "contact_id", "datatype": dbt.type_int()},
     {"name": "entity_id", "datatype": dbt.type_string()},

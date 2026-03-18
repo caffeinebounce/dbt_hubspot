@@ -22,7 +22,7 @@ with base as (
     select
         source_relation,
         _fivetran_deleted as is_deal_pipeline_stage_deleted,
-        cast(_fivetran_synced as {{ dbt.type_timestamp() }}) as _fivetran_synced,
+        cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         active as is_active,
         coalesce(is_closed, closed_won) as is_closed,
         display_order,

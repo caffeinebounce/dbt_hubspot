@@ -1,7 +1,7 @@
 {% macro get_form_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "_fivetran_deleted", "datatype": dbt.type_boolean()},
     {"name": "guid", "datatype": dbt.type_bigint()},
     {"name": "action", "datatype": dbt.type_string()},

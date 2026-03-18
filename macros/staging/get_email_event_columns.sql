@@ -1,7 +1,7 @@
 {% macro get_email_event_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_synced", "datatype": dbt.type_timestamp()},
+    {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "app_id", "datatype": dbt.type_int()},
     {"name": "caused_by_created", "datatype": dbt.type_timestamp()},
     {"name": "caused_by_id", "datatype": dbt.type_string()},

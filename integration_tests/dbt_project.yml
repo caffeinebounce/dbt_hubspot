@@ -123,7 +123,7 @@ seeds:
         id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
     contact_property_history_data:
       +column_types:
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         timestamp: timestamp
     deal_data:
       +column_types:
@@ -153,13 +153,13 @@ seeds:
     engagement_call_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         property_hs_createdate: timestamp
         property_hs_timestamp: timestamp
     engagement_communication_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         property_hs_createdate: timestamp
         property_hs_timestamp: timestamp
     engagement_company_data:
@@ -174,32 +174,32 @@ seeds:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         deal_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
     engagement_data:
       +column_types:
         id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
     engagement_meeting_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
     engagement_email_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         property_hs_createdate: timestamp
         property_hs_timestamp: timestamp
     engagement_task_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
         property_hs_object_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         property_hs_createdate: timestamp
         property_hs_timestamp: timestamp
     engagement_note_data:
       +column_types:
         engagement_id: "{{ 'int64' if target.type == 'bigquery' else 'bigint' }}"
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         property_hs_createdate: timestamp
         property_hs_timestamp: timestamp
     deal_pipeline_data:
@@ -227,7 +227,7 @@ seeds:
       +enabled: "{{ true if target.type not in ('snowflake', 'postgres') else false }}"
     email_event_data: 
       +column_types:
-        _fivetran_synced: timestamp
+        _synced_at: timestamp
         caused_by_created: timestamp
         created: timestamp
         obsoleted_by_created: timestamp
