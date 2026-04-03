@@ -1,7 +1,7 @@
 {% macro get_ticket_pipeline_stage_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_deleted", "datatype": "boolean"},
+    {"name": "_deleted", "datatype": "boolean"},
     {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "active", "datatype": "boolean"},
     {"name": "display_order", "datatype": dbt.type_int()},

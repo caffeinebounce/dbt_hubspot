@@ -1,4 +1,4 @@
-pipeline_id,_fivetran_deleted,_fivetran_synced,active,display_order,label,object_type_id,created_at,updated_at
+pipeline_id,_deleted,_fivetran_synced,active,display_order,label,object_type_id,created_at,updated_at
 5386331,FALSE,2021-03-30 14:16:02,TRUE,15,1277d6630760da4e7e889e5d1874bad9,0-5,2021-03-30 14:16:02,2021-03-30 14:16:02
 1486381,FALSE,2021-03-30 14:16:02,TRUE,5,43a68e729d0696fdd1014a83cd45267e,0-5,2021-03-30 14:16:02,2021-03-30 14:16:02
 0,FALSE,2021-03-30 14:16:02,TRUE,0,98d937dcebec9d0f6e040220cbf0db31,0-5,2021-03-30 14:16:02,2021-03-30 14:16:02

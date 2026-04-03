@@ -2,8 +2,8 @@
 Timestamp of when Fivetran synced a record.
 {% enddocs %}
 
-{% docs _fivetran_deleted %}
-Boolean indicating whether a record has been deleted in Hubspot and/or inferred deleted in Hubspot by Fivetran; _fivetran_deleted and is_deleted fields are equivalent. 
+{% docs _deleted %}
+Boolean indicating whether a record has been deleted in Hubspot and/or inferred deleted in Hubspot by Fivetran; _deleted and is_deleted fields are equivalent. 
 {% enddocs %}
 
 {% docs _fivetran_end %}
@@ -19,7 +19,7 @@ The hub ID.
 {% enddocs %}
 
 {% docs is_deleted %}
-Boolean indicating whether a record has been deleted in Hubspot and/or inferred deleted in Hubspot by Fivetran; _fivetran_deleted and is_deleted fields are equivalent.
+Boolean indicating whether a record has been deleted in Hubspot and/or inferred deleted in Hubspot by Fivetran; _deleted and is_deleted fields are equivalent.
 {% enddocs %}
 
 {% docs history_name %}

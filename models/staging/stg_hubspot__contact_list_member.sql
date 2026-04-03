@@ -21,7 +21,7 @@ with base as (
 
     select
         source_relation,
-        _fivetran_deleted as is_contact_list_member_deleted,
+        _deleted as is_contact_list_member_deleted,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         cast(added_at as {{ dbt.type_timestamp() }}) as added_timestamp,
         contact_id,

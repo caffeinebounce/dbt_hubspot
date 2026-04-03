@@ -25,7 +25,7 @@ with base as (
         name as role_name,
         requires_billing_write,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
-        _fivetran_deleted as is_deleted
+        _deleted as is_deleted
     from macro
 )
 

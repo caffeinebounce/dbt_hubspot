@@ -1,4 +1,4 @@
-pipeline_id,_fivetran_deleted,_fivetran_synced,active,display_order,label,created_at,updated_at
+pipeline_id,_deleted,_fivetran_synced,active,display_order,label,created_at,updated_at
 mp_pipeline_monitoring,FALSE,2020-07-09 15:25:37.051,TRUE,0,83t7Vz1pOW/Fx81JI4o+4g==,2020-07-09 15:25:37.051,2020-07-09 15:25:37.051
 default,FALSE,2020-07-09 15:25:37.053,TRUE,0,FioJAMNdGX8U65mUGCkDwA==,2020-07-09 15:25:37.053,2020-07-09 15:25:37.053
 mp_pipeline_service,FALSE,2020-07-09 15:25:37.024,TRUE,0,eDLdK7glKfd0VRV0G5OcLg==,2020-07-09 15:25:37.024,2020-07-09 15:25:37.024

@@ -35,7 +35,7 @@ with base as (
         redirect,
         submit_text,
         updated_at,
-        _fivetran_deleted as is_deleted
+        _deleted as is_deleted
 
     from macro
 )

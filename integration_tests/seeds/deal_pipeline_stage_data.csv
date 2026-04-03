@@ -1,4 +1,4 @@
-_fivetran_deleted,_fivetran_synced,active,closed_won,is_closed,display_order,probability,stage_id,label,pipeline_id,created_at,updated_at
+_deleted,_fivetran_synced,active,closed_won,is_closed,display_order,probability,stage_id,label,pipeline_id,created_at,updated_at
 FALSE,2020-07-09 15:25:37.054,TRUE,TRUE,TRUE,6,1.0,/n0+plNHbWErNq8Ek+NM3g==,HloNyGJEOLMWtXLjmapLQw==,wh+Wm18D0z1D4E+PE252gg==,2020-07-09 15:25:37.054,2020-07-09 15:25:37.054
 FALSE,2020-07-09 15:25:37.054,TRUE,FALSE,FALSE,7,0.0,hVXu1Iul7Cc7DcPuxQpOfg==,pqNpReDOp9fpUPal7wWFXg==,wh+Wm18D0z1D4E+PE252gg==,2020-07-09 15:25:37.054,2020-07-09 15:25:37.054
 FALSE,2020-07-09 15:25:37.054,TRUE,FALSE,FALSE,4,0.8,fQXVZHvq6nRBO5G2jluSrw==,lBHMEsbmFw2dboKkjcFP+Q==,wh+Wm18D0z1D4E+PE252gg==,2020-07-09 15:25:37.054,2020-07-09 15:25:37.054

@@ -25,7 +25,7 @@ with base as (
         user_id,
         is_secondary_user,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
-        _fivetran_deleted as is_deleted
+        _deleted as is_deleted
     from macro
 )
 

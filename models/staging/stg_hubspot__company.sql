@@ -45,7 +45,7 @@ with base as (
         -- a few columns below are aliased within the macros/get_company_columns.sql macro
         source_relation,
         company_id,
-        coalesce(is_company_deleted, _fivetran_deleted) as is_company_deleted,
+        coalesce(is_company_deleted, _deleted) as is_company_deleted,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         company_name,
         description,

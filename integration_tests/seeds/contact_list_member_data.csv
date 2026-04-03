@@ -1,4 +1,4 @@
-contact_id,contact_list_id,_fivetran_deleted,_fivetran_synced,added_at
+contact_id,contact_list_id,_deleted,_fivetran_synced,added_at
 31993001,38,true,2020-05-10 11:01:15.168,2020-05-10 01:04:46.778
 31975951,38,true,2020-05-10 11:01:15.168,2020-05-09 20:11:58.336
 31977751,38,true,2020-05-10 11:01:15.168,2020-05-09 20:52:12.172
