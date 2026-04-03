@@ -13,7 +13,7 @@ models:
         description: The ID of the engagement.
         tests:
           - not_null
-      - name: _fivetran_deleted
+      - name: _deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_type
         description: The type of the engagement.
@@ -45,8 +45,8 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: _synced_at
         description: '{{ doc("_synced_at") }}'
-      - name: _fivetran_deleted
-        description: '{{ doc("_fivetran_deleted") }}'
+      - name: _deleted
+        description: '{{ doc("_deleted") }}'
       - name: engagement_id
         description: ID of the engagement associated with the communication.
         tests:
@@ -123,7 +123,7 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: _synced_at
         description: '{{ doc("_synced_at") }}'
-      - name: _fivetran_deleted
+      - name: _deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
         description: The ID of the engagement.
@@ -159,7 +159,7 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: _synced_at
         description: '{{ doc("_synced_at") }}'
-      - name: _fivetran_deleted
+      - name: _deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
         description: The ID of the engagement.
@@ -195,7 +195,7 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: _synced_at
         description: '{{ doc("_synced_at") }}'
-      - name: _fivetran_deleted
+      - name: _deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
         description: The ID of the engagement.
@@ -233,7 +233,7 @@ models:
         description: "{{ doc('source_relation') }}"
       - name: _synced_at
         description: '{{ doc("_synced_at") }}'
-      - name: _fivetran_deleted
+      - name: _deleted
         description: Boolean to mark rows that were deleted in the source database.
       - name: engagement_id
         description: The ID of the engagement.

@@ -29,7 +29,7 @@ with base as (
         processing_type,
         list_version,
         filters_updated_at,
-        _fivetran_deleted as is_contact_list_deleted,
+        _deleted as is_contact_list_deleted,
         cast(updated_at as {{ dbt.type_timestamp() }}) as updated_timestamp,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         cast(created_at as {{ dbt.type_timestamp() }}) as created_timestamp

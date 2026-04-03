@@ -13,11 +13,11 @@ with base as (
 ), joined as (
 
     select
-        {{ dbt_utils.star(from=base_model, relation_alias="base", except=["_fivetran_deleted"]) }},
+        {{ dbt_utils.star(from=base_model, relation_alias="base", except=["_deleted"]) }},
         {% if fivetran_utils.enabled_vars(['hubspot_engagement_contact_enabled']) %} engagements.contact_ids, {% endif %}
         {% if fivetran_utils.enabled_vars(['hubspot_engagement_deal_enabled']) %} engagements.deal_ids, {% endif %}
         {% if fivetran_utils.enabled_vars(['hubspot_engagement_company_enabled']) %} engagements.company_ids, {% endif %}
-        not base._fivetran_deleted as is_active
+        not base._deleted as is_active
     from base
     left join engagements
         on base.engagement_id = engagements.engagement_id

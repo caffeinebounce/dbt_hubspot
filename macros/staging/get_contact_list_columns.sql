@@ -1,7 +1,7 @@
 {% macro get_contact_list_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_deleted", "datatype": "boolean"},
+    {"name": "_deleted", "datatype": "boolean"},
     {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "created_at", "datatype": dbt.type_timestamp()},
     {"name": "id", "datatype": dbt.type_int()},

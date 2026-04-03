@@ -45,7 +45,7 @@ with base as (
         -- a few columns below are aliased within the macros/get_ticket_columns.sql macro
         source_relation,
         ticket_id,
-        coalesce(_fivetran_ticket_deleted, is_ticket_deleted) as is_ticket_deleted,
+        coalesce(_ticket_deleted, is_ticket_deleted) as is_ticket_deleted,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         cast(closed_date as {{ dbt.type_timestamp() }}) as closed_date,
         cast(created_date as {{ dbt.type_timestamp() }}) as created_date,

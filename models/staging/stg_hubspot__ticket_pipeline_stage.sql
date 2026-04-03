@@ -24,7 +24,7 @@ final as (
 
     select
         source_relation,
-        _fivetran_deleted as is_ticket_pipeline_stage_deleted,
+        _deleted as is_ticket_pipeline_stage_deleted,
         cast(_synced_at as {{ dbt.type_timestamp() }}) as _synced_at,
         active as is_active,
         display_order,

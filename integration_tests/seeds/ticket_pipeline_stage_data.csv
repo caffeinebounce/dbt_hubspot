@@ -1,4 +1,4 @@
-stage_id,_fivetran_deleted,_fivetran_synced,active,display_order,is_closed,label,pipeline_id,ticket_state,created_at,updated_at
+stage_id,_deleted,_fivetran_synced,active,display_order,is_closed,label,pipeline_id,ticket_state,created_at,updated_at
 1,FALSE,2021-03-30 14:16:02,TRUE,0,FALSE,03c2e7e41ffc181a4e84080b4710e81e,0,OPEN,2021-03-30 14:16:02,2021-03-30 14:16:02
 3,FALSE,2021-03-30 14:16:02,TRUE,2,FALSE,76a756f37ed4f9039fbe152954566e7a,0,OPEN,2021-03-30 14:16:02,2021-03-30 14:16:02
 7806423,FALSE,2021-03-30 14:16:02,TRUE,3,FALSE,c5f73dc5584f3189388b4294865e9300,0,OPEN,2021-03-30 14:16:02,2021-03-30 14:16:02

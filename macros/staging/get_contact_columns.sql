@@ -1,7 +1,7 @@
 {% macro get_contact_columns() %}
 
 {% set columns = [
-    {"name": "_fivetran_deleted", "datatype": dbt.type_boolean(), "alias": "is_contact_deleted"},
+    {"name": "_deleted", "datatype": dbt.type_boolean(), "alias": "is_contact_deleted"},
     {"name": "_synced_at", "datatype": dbt.type_timestamp()},
     {"name": "id", "datatype": dbt.type_int(), "alias": "contact_id"},
     {"name": "property_hs_merged_object_ids", "datatype": dbt.type_string(), "alias": "merged_object_ids"},

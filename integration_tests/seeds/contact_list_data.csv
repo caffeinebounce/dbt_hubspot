@@ -1,4 +1,4 @@
-id,_fivetran_deleted,_fivetran_synced,created_at,updated_at,name,created_by_id,object_type_id,processing_status,processing_type,list_version,filters_updated_at
+id,_deleted,_fivetran_synced,created_at,updated_at,name,created_by_id,object_type_id,processing_status,processing_type,list_version,filters_updated_at
 330,false,2020-07-09 11:01:54.494,2019-07-16 15:47:36.446,2019-07-16 15:47:36.446,VP8DfG5/mkHNKZ6EglulZA==,11111111,0-1,COMPLETE,DYNAMIC,1,2019-07-16 15:47:36.446
 226,false,2020-07-09 11:01:44.788,2019-04-12 13:13:34.414,2019-04-12 13:13:34.414,7jvC5GpQ/pqnEEZhlX7Gww==,11111111,0-1,COMPLETE,MANUAL,1,2019-04-12 13:13:34.414
 225,false,2020-07-09 11:01:44.587,2019-04-12 13:13:34.047,2019-04-12 13:13:34.047,sSFJaXqXZpsMxgs+ylJlPw==,11111111,1-1,COMPLETE,MANUAL,1,2019-04-12 13:13:34.047
